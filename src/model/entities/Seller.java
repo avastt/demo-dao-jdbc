@@ -1,32 +1,32 @@
-package modelo.entidades;
+package model.entities;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class Vendedor implements Serializable {
+public class Seller implements Serializable {
 
 	private static final long serialVersionUID = 6878472752778503031L;
-	
+
 	private Integer Id;
 	private String name;
 	private String email;
 	private Date birthDate;
 	private Double baseSalary;
 
-	private Departamento departamento;
+	private Department department;
 
-	public Vendedor() {
+	public Seller() {
 
 	}
 
-	public Vendedor(Integer id, String name, String email, Date birthDate, Double baseSalary,
-			Departamento departamento) {
+	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary,
+			Department department) {
 		Id = id;
 		this.name = name;
 		this.email = email;
 		this.birthDate = birthDate;
 		this.baseSalary = baseSalary;
-		this.departamento = departamento;
+		this.department = department;
 	}
 
 	public Integer getId() {
@@ -69,12 +69,12 @@ public class Vendedor implements Serializable {
 		this.baseSalary = baseSalary;
 	}
 
-	public Departamento getDepartamento() {
-		return departamento;
+	public Department getDepartamento() {
+		return department;
 	}
 
-	public void setDepartamento(Departamento departamento) {
-		this.departamento = departamento;
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 	@Override
@@ -93,7 +93,7 @@ public class Vendedor implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Vendedor other = (Vendedor) obj;
+		Seller other = (Seller) obj;
 		if (Id == null) {
 			if (other.Id != null)
 				return false;
@@ -104,8 +104,8 @@ public class Vendedor implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Vedendor [Id=" + Id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate
-				+ ", baseSalary=" + baseSalary + ", departamento=" + departamento + "]";
+		return "Seller [Id=" + Id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate
+				+ ", baseSalary=" + baseSalary + ", department=" + department + "]";
 	}
 
 }
